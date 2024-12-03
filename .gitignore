@@ -1,0 +1,19 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/997/
+/broadcast/*/995/
+/broadcast/**/dry-run/
+
+# Dotenv file
+.env
+
+# Coverage
+lcov.info
+
+# IDEs
+.vscode
+.idea

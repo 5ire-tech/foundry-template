@@ -1,0 +1,35 @@
+[profile.default]
+  evm_version = "london"
+  optimizer = true
+  optimizer_runs = 10_000_000
+  solc_version = "0.8.18"
+  verbosity = 3
+
+  
+[profile.lite]
+  fuzz = { runs = 50 }
+  invariant = { runs = 10 }
+  # Speed up compilation and tests during development.
+  optimizer = false
+
+[rpc_endpoints]
+5ireTestnet = "https://rpc.testnet.5ire.network"
+5ireMainnet = "https://rpc.5ire.network"
+
+[fmt]
+  bracket_spacing = false
+  int_types = "long"
+  line_length = 100
+  multiline_func_header = "attributes_first"
+  number_underscore = "thousands"
+  quote_style = "double"
+  single_line_statement_blocks = "single"
+  tab_width = 2
+  wrap_comments = true
+
+
+[etherscan]
+5ireTestnet = { key = "${ETHERSCAN_API_KEY}", chain = "997", url = "https://contract.evm.testnet.5ire.network/5ire/verify" }
+5ireMainnet = { key = "${ETHERSCAN_API_KEY}", chain = "995", url = "https://contract.evm.scan.5ire.network/5ire/verify" }
+
+
