@@ -36,3 +36,20 @@ Consequently, the test structure is as follows:
 
 ### Command
 
+Note: 
++ You need to set the `ETHERSCAN_API_KEY` environment variable to your Etherscan API key and `PRIVATE_KEY` to your wallet private key.
+
++ Make sure your wallet has enough balance to pay for the gas fees.
+
+
+
+## Testnet 
+
+```bash
+forge script script/Deploy.s.sol --rpc-url 5ireTestnet src/Counter.sol:Counter --legacy --broadcast --verify
+```
+
+## Mainnet
+```bash
+forge script script/Deploy.s.sol --rpc-url 5ireMainnet src/Counter.sol:Counter --legacy --broadcast --verify
+```
